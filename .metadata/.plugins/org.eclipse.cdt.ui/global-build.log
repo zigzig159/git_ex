@@ -1,0 +1,21 @@
+21:11:10 **** Incremental Build of configuration Debug for project stm32f103_fw ****
+make -j12 all 
+arm-none-eabi-gcc "../src/hw/driver/led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"D:/HW_FW/FW/stm32f103/stm32f103_fw/src" -I"D:/HW_FW/FW/stm32f103/stm32f103_fw/src/hw/include" -I"D:/HW_FW/FW/stm32f103/stm32f103_fw/src/lib/stm32f103_cube/Drivers/CMSIS/Include" -I"D:/HW_FW/FW/stm32f103/stm32f103_fw/src/lib/stm32f103_cube/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"D:/HW_FW/FW/stm32f103/stm32f103_fw/src/lib/stm32f103_cube/Drivers/STM32F1xx_HAL_Driver/Inc" -I"D:/HW_FW/FW/stm32f103/stm32f103_fw/src/ap" -I"D:/HW_FW/FW/stm32f103/stm32f103_fw/src/bsp" -I"D:/HW_FW/FW/stm32f103/stm32f103_fw/src/common" -I"D:/HW_FW/FW/stm32f103/stm32f103_fw/src/hw" -I"D:/HW_FW/FW/stm32f103/stm32f103_fw/src/lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"src/hw/driver/led.d" -MT"src/hw/driver/led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/driver/led.o"
+arm-none-eabi-gcc -o "stm32f103_fw.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\HW_FW\FW\stm32f103\stm32f103_fw\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103_fw.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f103_fw.elf
+ 
+arm-none-eabi-size  stm32f103_fw.elf 
+arm-none-eabi-objdump -h -S stm32f103_fw.elf  > "stm32f103_fw.list"
+   text	   data	    bss	    dec	    hex	filename
+   4964	     20	   1572	   6556	   199c	stm32f103_fw.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32f103_fw.list
+ 
+21:11:24 **** Incremental Build of configuration Debug for project stm32f103_fw ****
+make -j12 all 
+arm-none-eabi-size  stm32f103_fw.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4964	     20	   1572	   6556	   199c	stm32f103_fw.elf
+Finished building: default.size.stdout
+ 
